@@ -9,14 +9,19 @@
         <link rel="canonical" href="https://www.mkdocs.org/user-guide/custom-themes/">
         <link rel="shortcut icon" href="../../img/favicon.ico">
         <title>Custom Themes - MkDocs</title>
-        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
         <link href="../../css/font-awesome.min.css" rel="stylesheet">
         <link href="../../css/base.css" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
         <link href="../../css/extra.css" rel="stylesheet">
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
 
         <script src="../../js/jquery-1.10.2.min.js" defer></script>
-        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="../../js/bootstrap-3.0.3.min.js" defer></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/django.min.js"></script>
@@ -33,87 +38,95 @@
     </head>
 
     <body>
-        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
             <div class="container">
-                <a class="navbar-brand" href="../..">MkDocs</a>
-                <!-- Expander button -->
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+
+                <!-- Collapsed navigation -->
+                <div class="navbar-header">
+                    <!-- Expander button -->
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="../..">MkDocs</a>
+                </div>
 
                 <!-- Expanded navigation -->
-                <div id="navbar-collapse" class="navbar-collapse collapse">
+                <div class="navbar-collapse collapse">
                         <!-- Main navigation -->
                         <ul class="nav navbar-nav">
-                            <li class="navitem">
-                                <a href="../.." class="nav-link">Home</a>
+                            <li >
+                                <a href="../..">Home</a>
                             </li>
                             <li class="dropdown active">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li>
-    <a href="../writing-your-docs/" class="dropdown-item">Writing Your Docs</a>
+<li >
+    <a href="../writing-your-docs/">Writing Your Docs</a>
 </li>
                                     
-<li>
-    <a href="../styling-your-docs/" class="dropdown-item">Styling Your Docs</a>
+<li >
+    <a href="../styling-your-docs/">Styling Your Docs</a>
 </li>
                                     
-<li>
-    <a href="../configuration/" class="dropdown-item">Configuration</a>
+<li >
+    <a href="../configuration/">Configuration</a>
 </li>
                                     
-<li>
-    <a href="../deploying-your-docs/" class="dropdown-item">Deploying Your Docs</a>
+<li >
+    <a href="../deploying-your-docs/">Deploying Your Docs</a>
 </li>
                                     
-<li>
-    <a href="./" class="dropdown-item active">Custom Themes</a>
+<li class="active">
+    <a href="./">Custom Themes</a>
 </li>
                                     
-<li>
-    <a href="../plugins/" class="dropdown-item">Plugins</a>
+<li >
+    <a href="../plugins/">Plugins</a>
 </li>
                                 </ul>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">About <b class="caret"></b></a>
                                 <ul class="dropdown-menu">
                                     
-<li>
-    <a href="../../about/release-notes/" class="dropdown-item">Release Notes</a>
+<li >
+    <a href="../../about/release-notes/">Release Notes</a>
 </li>
                                     
-<li>
-    <a href="../../about/contributing/" class="dropdown-item">Contributing</a>
+<li >
+    <a href="../../about/contributing/">Contributing</a>
 </li>
                                     
-<li>
-    <a href="../../about/license/" class="dropdown-item">License</a>
+<li >
+    <a href="../../about/license/">License</a>
 </li>
                                 </ul>
                             </li>
                         </ul>
 
-                    <ul class="nav navbar-nav ml-auto">
-                        <li class="nav-item">
-                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li>
+                            <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
                                 <i class="fa fa-search"></i> Search
                             </a>
                         </li>
-                            <li class="nav-item">
-                                <a rel="prev" href="../deploying-your-docs/" class="nav-link">
+                            <li >
+                                <a rel="next" href="../deploying-your-docs/">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a rel="next" href="../plugins/" class="nav-link">
+                            <li >
+                                <a rel="prev" href="../plugins/">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
-                            <li class="nav-item">
-                                <a href="https://github.com/mkdocs/mkdocs/" class="nav-link"><i class="fa fa-github"></i> GitHub</a>
+                            <li>
+                                <a href="https://github.com/mkdocs/mkdocs/"><i class="fa fa-github"></i> GitHub</a>
                             </li>
                     </ul>
                 </div>
@@ -121,54 +134,19 @@
         </div>
 
         <div class="container">
-            <div class="row">
-                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
-    <div class="navbar-header">
-        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
-            <span class="fa fa-angle-down"></span>
-        </button>
-    </div>
-
-    
-    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
-        <ul class="nav flex-column">
-            
-            <li class="nav-item" data-level="1"><a href="#custom-themes" class="nav-link">Custom themes</a>
-              <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#creating-a-custom-theme" class="nav-link">Creating a custom theme</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#basic-theme" class="nav-link">Basic theme</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#theme-files" class="nav-link">Theme Files</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#template-variables" class="nav-link">Template Variables</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#template-filters" class="nav-link">Template Filters</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#search-and-themes" class="nav-link">Search and themes</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#packaging-themes" class="nav-link">Packaging Themes</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-              </ul>
-            </li>
-        </ul>
-    </div>
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+        <li class="main active"><a href="#custom-themes">Custom themes</a></li>
+            <li><a href="#creating-a-custom-theme">Creating a custom theme</a></li>
+            <li><a href="#basic-theme">Basic theme</a></li>
+            <li><a href="#theme-files">Theme Files</a></li>
+            <li><a href="#template-variables">Template Variables</a></li>
+            <li><a href="#template-filters">Template Filters</a></li>
+            <li><a href="#search-and-themes">Search and themes</a></li>
+            <li><a href="#packaging-themes">Packaging Themes</a></li>
+    </ul>
 </div></div>
-                    <div class="col-md-9" role="main">
+                <div class="col-md-9" role="main">
 
 <h1 id="custom-themes">Custom themes<a class="headerlink" href="#custom-themes" title="Permanent link"></a></h1>
 <p>A guide to creating and distributing custom themes.</p>
@@ -191,7 +169,7 @@ file which is placed in a directory that is <em>not</em> a child of the <a href=
 Within <code>mkdocs.yml</code>, set the theme.<a href="../configuration/#custom_dir">custom_dir</a> option to the path of the
 directory containing <code>main.html</code>. The path should be relative to the
 configuration file. For example, given this example project layout:</p>
-<pre><code class="no-highlight">mkdocs.yml
+<pre><code class="language-no-highlight">mkdocs.yml
 docs/
     index.md
     about.md
@@ -199,14 +177,12 @@ custom_theme/
     main.html
     ...
 </code></pre>
-
 <p>... you would include the following settings in <code>mkdocs.yml</code> to use the custom theme
 directory:</p>
-<pre><code class="yaml">theme:
+<pre><code class="language-yaml">theme:
     name: null
     custom_dir: 'custom_theme/'
 </code></pre>
-
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Generally, when building your own custom theme, the theme.<a href="../configuration/#name">name</a>
@@ -232,7 +208,7 @@ is required for the theme.</p>
 </div>
 <h2 id="basic-theme">Basic theme<a class="headerlink" href="#basic-theme" title="Permanent link"></a></h2>
 <p>The simplest <code>main.html</code> file is the following:</p>
-<pre><code class="django">&lt;!DOCTYPE html&gt;
+<pre><code class="language-django">&lt;!DOCTYPE html&gt;
 &lt;html&gt;
   &lt;head&gt;
     &lt;title&gt;{% if page.title %}{{ page.title }} - {% endif %}{{ config.site_name }}&lt;/title&gt;
@@ -242,7 +218,6 @@ is required for the theme.</p>
   &lt;/body&gt;
 &lt;/html&gt;
 </code></pre>
-
 <p>The body content from each page specified in <code>mkdocs.yml</code> is inserted using the
 <code>{{ page.content }}</code> tag. Style-sheets and scripts can be brought into this
 theme as with a normal HTML file. Navbars and tables of contents can also be
@@ -279,12 +254,11 @@ the <code>mkdocs_theme.yml</code> configuration file and any Python files.</p>
 <h3 id="dot-files">Dot Files<a class="headerlink" href="#dot-files" title="Permanent link"></a></h3>
 <p>Theme authors can explicitly force MkDocs to ignore files by starting a file or
 directory name with a dot. Any of the following files would be ignored:</p>
-<pre><code class="text">.ignored.txt
+<pre><code class="language-text">.ignored.txt
 .ignored/file.txt
 foo/.ignored.txt
 foo/.ignored/file.txt
 </code></pre>
-
 <h3 id="documentation-files">Documentation Files<a class="headerlink" href="#documentation-files" title="Permanent link"></a></h3>
 <p>All documentation files are ignored. Specifically, any Markdown files (using any
 of the file extensions supported by MKDocs). Additionally, any README files
@@ -331,7 +305,7 @@ list of all pages, use the <a href="#pages">pages</a> template variable.</p>
 <h5 id="nav-example">Nav Example<a class="headerlink" href="#nav-example" title="Permanent link"></a></h5>
 <p>Following is a basic usage example which outputs the first and second level
 navigation as a nested list.</p>
-<pre><code class="django">{% if nav|length&gt;1 %}
+<pre><code class="language-django">{% if nav|length&gt;1 %}
     &lt;ul&gt;
     {% for nav_item in nav %}
         {% if nav_item.children %}
@@ -353,7 +327,6 @@ navigation as a nested list.</p>
     &lt;/ul&gt;
 {% endif %}
 </code></pre>
-
 <h4 id="base_url">base_url<a class="headerlink" href="#base_url" title="Permanent link"></a></h4>
 <p>The <code>base_url</code> provides a relative path to the root of the MkDocs project. While
 this can be used directly by prepending it to a local relative URL, it is best
@@ -393,7 +366,7 @@ the <code>toc</code> is an <code>AnchorLink</code> which contains the following 
 </ul>
 <p>The following example would display the top two levels of the Table of Contents
 for a page.</p>
-<pre><code class="django">&lt;ul&gt;
+<pre><code class="language-django">&lt;ul&gt;
 {% for toc_item in page.toc %}
     &lt;li&gt;&lt;a href=&quot;{{ toc_item.url }}&quot;&gt;{{ toc_item.title }}&lt;/a&gt;&lt;/li&gt;
     {% for toc_item in toc_item.children %}
@@ -402,35 +375,31 @@ for a page.</p>
 {% endfor %}
 &lt;/ul&gt;
 </code></pre>
-
 <h5 id="pagemeta">page.meta<a class="headerlink" href="#pagemeta" title="Permanent link"></a></h5>
 <p>A mapping of the metadata included at the top of the markdown page. In this
 example we define a <code>source</code> property above the page title.</p>
-<pre><code class="no-highlight">source: generics.py
+<pre><code class="language-no-highlight">source: generics.py
         mixins.py
 
 # Page title
 
 Content...
 </code></pre>
-
 <p>A template can access this metadata for the page with the <code>meta.source</code>
 variable. This could then be used to link to source files related to the
 documentation page.</p>
-<pre><code class="django">{% for filename in page.meta.source %}
+<pre><code class="language-django">{% for filename in page.meta.source %}
   &lt;a class=&quot;github&quot; href=&quot;https://github.com/.../{{ filename }}&quot;&gt;
     &lt;span class=&quot;label label-info&quot;&gt;{{ filename }}&lt;/span&gt;
   &lt;/a&gt;
 {% endfor %}
 </code></pre>
-
 <h5 id="pageurl">page.url<a class="headerlink" href="#pageurl" title="Permanent link"></a></h5>
 <p>The URL of the page relative to the MkDocs <code>site_dir</code>. It is expected that this
 be used with the <a href="#url">url</a> filter to ensure the URL is relative to the current
 page.</p>
-<pre><code class="django">&lt;a href=&quot;{{ page.url|url }}&quot;&gt;{{ page.title }}&lt;/a&gt;
+<pre><code class="language-django">&lt;a href=&quot;{{ page.url|url }}&quot;&gt;{{ page.title }}&lt;/a&gt;
 </code></pre>
-
 <h5 id="pageabs_url">page.abs_url<a class="headerlink" href="#pageabs_url" title="Permanent link"></a></h5>
 <p>The absolute URL of the page from the server root as determined by the value
 assigned to the <a href="../configuration/#site_url">site_url</a> configuration setting. The value includes any
@@ -454,9 +423,8 @@ variable.</p>
 pages. This can be used in conjunction with other attributes of the <code>page</code>
 object to alter the behavior. For example, to display a different title
 on the homepage:</p>
-<pre><code class="django">{% if not page.is_homepage %}{{ page.title }} - {% endif %}{{ site_name }}
+<pre><code class="language-django">{% if not page.is_homepage %}{{ page.title }} - {% endif %}{{ site_name }}
 </code></pre>
-
 <h5 id="pageprevious_page">page.previous_page<a class="headerlink" href="#pageprevious_page" title="Permanent link"></a></h5>
 <p>The page object for the previous page or <code>None</code>. The value will be <code>None</code> if the
 current page is the first item in the site navigation or if the current page is
@@ -550,16 +518,15 @@ set of key value pairs that can make custom templates far more flexible.</p>
 <p>For example, this could be used to include the project version of all pages
 and a list of links related to the project. This can be achieved with the
 following <code>extra</code> configuration:</p>
-<pre><code class="yaml">extra:
+<pre><code class="language-yaml">extra:
     version: 0.13.0
     links:
         - https://github.com/mkdocs
         - https://docs.readthedocs.org/en/latest/builds.html#mkdocs
         - https://www.mkdocs.org/
 </code></pre>
-
 <p>And then displayed with this HTML in the custom theme.</p>
-<pre><code class="django">{{ config.extra.version }}
+<pre><code class="language-django">{{ config.extra.version }}
 
 {% if config.extra.links %}
   &lt;ul&gt;
@@ -569,7 +536,6 @@ following <code>extra</code> configuration:</p>
   &lt;/ul&gt;
 {% endif %}
 </code></pre>
-
 <h2 id="template-filters">Template Filters<a class="headerlink" href="#template-filters" title="Permanent link"></a></h2>
 <p>In addition to Jinja's default filters, the following custom filters are
 available to use in MkDocs templates:</p>
@@ -578,16 +544,14 @@ available to use in MkDocs templates:</p>
 relative and the template context includes a page object, then the URL is
 returned relative to the page object. Otherwise, the URL is returned with
 <a href="#base_url">base_url</a> prepended.</p>
-<pre><code class="django">&lt;a href=&quot;{{ page.url|url }}&quot;&gt;{{ page.title }}&lt;/a&gt;
+<pre><code class="language-django">&lt;a href=&quot;{{ page.url|url }}&quot;&gt;{{ page.title }}&lt;/a&gt;
 </code></pre>
-
 <h3 id="tojson">tojson<a class="headerlink" href="#tojson" title="Permanent link"></a></h3>
 <p>Safety convert a Python object to a value in a JavaScript script.</p>
-<pre><code class="django">&lt;script&gt;
+<pre><code class="language-django">&lt;script&gt;
     var mkdocs_page_name = {{ page.title|tojson|safe }};
 &lt;/script&gt;
 </code></pre>
-
 <h2 id="search-and-themes">Search and themes<a class="headerlink" href="#search-and-themes" title="Permanent link"></a></h2>
 <p>As of MkDocs version <em>0.17</em> client side search support has been added to MkDocs
 via the <code>search</code> plugin. A theme needs to provide a few things for the plugin to
@@ -595,11 +559,10 @@ work with the theme.</p>
 <p>While the <code>search</code> plugin is activated by default, users can disable the plugin
 and themes should account for this. It is recommended that theme templates wrap
 search specific markup with a check for the plugin:</p>
-<pre><code class="django">{% if 'search' in config['plugins'] %}
+<pre><code class="language-django">{% if 'search' in config['plugins'] %}
     search stuff here...
 {% endif %}
 </code></pre>
-
 <p>At its most basic functionality, the search plugin will simply provide an index
 file which is no more than a JSON file containing the content of all pages.
 The theme would need to implement its own search functionality client-side.
@@ -608,12 +571,11 @@ a complete functioning client-side search tool based on <a href="https://lunrjs.
 <p>The following HTML needs to be added to the theme so that the provided
 JavaScript is able to properly load the search scripts and make relative links
 to the search results from the current page.</p>
-<pre><code class="django">&lt;script&gt;var base_url = '{{ base_url }}';&lt;/script&gt;
+<pre><code class="language-django">&lt;script&gt;var base_url = '{{ base_url }}';&lt;/script&gt;
 </code></pre>
-
 <p>With properly configured settings, the following HTML in a template  will add a
 full search implementation to your theme.</p>
-<pre><code class="django">&lt;h1 id=&quot;search&quot;&gt;Search Results&lt;/h1&gt;
+<pre><code class="language-django">&lt;h1 id=&quot;search&quot;&gt;Search Results&lt;/h1&gt;
 
 &lt;form action=&quot;search.html&quot;&gt;
   &lt;input name=&quot;q&quot; id=&quot;mkdocs-search-query&quot; type=&quot;text&quot; &gt;
@@ -623,7 +585,6 @@ full search implementation to your theme.</p>
   Sorry, page not found.
 &lt;/div&gt;
 </code></pre>
-
 <p>The JavaScript in the plugin works by looking for the specific ID's used in the
 above HTML. The form input for the user to type the search query must be
 identified with <code>id="mkdocs-search-query"</code> and the div where the results will be
@@ -652,13 +613,12 @@ provided index file is the responsibility of the theme.</p>
 <p>The search index is written to a JSON file at <code>search/search_index.json</code> in the
 <a href="../configuration/#site_dir">site_dir</a>. The JSON object contained within the file may contain up to three
 objects.</p>
-<pre><code class="json">{
+<pre><code class="language-json">{
     config: {...},
     data: [...],
     index: {...}
 }
 </code></pre>
-
 <p>If present, the <code>config</code> object contains the key/value pairs of config options
 defined for the plugin in the user's <code>mkdocs.yml</code> config file under
 <code>plugings.search</code>. The <code>config</code> object was new in MkDocs version <em>1.0</em>.</p>
@@ -691,7 +651,7 @@ your theme, your users can more easily install it, they can rely on a default
 directory called <code>MANIFEST.in</code> and <code>setup.py</code> beside the theme directory which
 contains an empty <code>__init__.py</code> file, a theme configuration file
 (<code>mkdocs-theme.yml</code>), and your template and media files.</p>
-<pre><code class="no-highlight">.
+<pre><code class="language-no-highlight">.
 |-- MANIFEST.in
 |-- theme_name
 |   |-- __init__.py
@@ -700,17 +660,15 @@ contains an empty <code>__init__.py</code> file, a theme configuration file
 |   |-- styles.css
 `-- setup.py
 </code></pre>
-
 <p>The <code>MANIFEST.in</code> file should contain the following contents but with
 theme_name updated and any extra file extensions added to the include.</p>
-<pre><code class="no-highlight">recursive-include theme_name *.ico *.js *.css *.png *.html *.eot *.svg *.ttf *.woff
+<pre><code class="language-no-highlight">recursive-include theme_name *.ico *.js *.css *.png *.html *.eot *.svg *.ttf *.woff
 recursive-exclude * __pycache__
 recursive-exclude * *.py[co]
 </code></pre>
-
 <p>The <code>setup.py</code> should include the following text with the modifications
 described below.</p>
-<pre><code class="python">from setuptools import setup, find_packages
+<pre><code class="language-python">from setuptools import setup, find_packages
 
 VERSION = '0.0.1'
 
@@ -733,7 +691,6 @@ setup(
     zip_safe=False
 )
 </code></pre>
-
 <p>Fill in the URL, license, description, author and author email address.</p>
 <p>The name should follow the convention <code>mkdocs-themename</code> (like <code>mkdocs-
 bootstrap</code> and <code>mkdocs-bootswatch</code>), starting with MkDocs, using hyphens to
@@ -759,22 +716,19 @@ file as that file is not loaded from <code>theme.custom_dir</code>.</p>
 those options will be made available in the templates to control behavior.
 For example, a theme might want to make a sidebar optional and include the
 following in the <code>mkdocs_theme.yml</code> file:</p>
-<pre><code class="yaml">show_sidebar: true
+<pre><code class="language-yaml">show_sidebar: true
 </code></pre>
-
 <p>Then in a template, that config option could be referenced:</p>
-<pre><code class="django">{% if config.theme.show_sidebar %}
+<pre><code class="language-django">{% if config.theme.show_sidebar %}
 &lt;div id=&quot;sidebar&quot;&gt;...&lt;/div&gt;
 {% endif %}
 </code></pre>
-
 <p>And the user could override the default in their project's <code>mkdocs.yml</code> config
 file:</p>
-<pre><code class="yaml">theme:
+<pre><code class="language-yaml">theme:
     name: themename
     show_sidebar: false
 </code></pre>
-
 <p>In addition to arbitrary options defined by the theme, MkDocs defines a few
 special options which alters its behavior:</p>
 <div class="admonition block">
@@ -796,13 +750,11 @@ done with pip, using <code>pip install .</code> if you are still in the same dir
 the setup.py.</p>
 <p>Most Python packages, including MkDocs, are distributed on PyPI. To do this,
 you should run the following command.</p>
-<pre><code class="no-highlight">python setup.py register
+<pre><code class="language-no-highlight">python setup.py register
 </code></pre>
-
 <p>If you don't have an account setup, you should be prompted to create one.</p>
 <p>For a much more detailed guide, see the official Python packaging
 documentation for <a href="https://packaging.python.org/en/latest/distributing/">Packaging and Distributing Projects</a>.</p></div>
-            </div>
         </div>
 
         <footer class="col-md-12">
@@ -817,21 +769,21 @@ documentation for <a href="https://packaging.python.org/en/latest/distributing/"
         <script src="../../js/base.js" defer></script>
         <script src="../../search/main.js" defer></script>
 
-        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg">
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+    <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="searchModalLabel">Search</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Search</h4>
             </div>
             <div class="modal-body">
                 <p>
                     From here you can search these documents. Enter
                     your search terms below.
                 </p>
-                <form>
+                <form role="form">
                     <div class="form-group">
-                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                        <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
                     </div>
                 </form>
                 <div id="mkdocs-search-results"></div>
@@ -840,12 +792,12 @@ documentation for <a href="https://packaging.python.org/en/latest/distributing/"
             </div>
         </div>
     </div>
-</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="Keyboard Shortcuts Modal" aria-hidden="true">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
-                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
                 <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                <h4 class="modal-title" id="exampleModalLabel">Keyboard Shortcuts</h4>
             </div>
             <div class="modal-body">
               <table class="table">
